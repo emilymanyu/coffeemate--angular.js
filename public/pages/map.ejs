@@ -1,0 +1,16 @@
+<style>
+    .angular-google-map-container { height: 400px; }
+</style>
+
+
+<div ng-controller="mapController">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-marker idKey='1' coords='{ latitude: 45, longitude: -73 }'></ui-gmap-marker>
+        <ui-gmap-marker idKey='2222' coords='{ latitude: 46, longitude: -72 }'></ui-gmap-marker>
+        <ui-gmap-marker idKey='marker.id' coords='marker.coord'>
+            <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                <div>{{title}}</div>
+            </ui-gmap-window>
+        </ui-gmap-marker>
+    </ui-gmap-google-map>
+</div>

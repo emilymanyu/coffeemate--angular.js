@@ -1,0 +1,31 @@
+<div class="jumbotron text-center">
+	<h1>Make a Coffeemate</h1>
+
+  <p>{{ message }}</p>
+  <td><img src="./images/789.jpeg"></td>
+	
+<div ng-controller="addController">
+	<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <form ng-submit="addCoffeemate()"
+        style="margin-top:30px;">
+        <h3>Add a new Coffeemate</h3>
+
+        <div class="form-group" align="center">
+          <select ng-model="formData.nameOptions" class="form-control" ng-show="formData.nameOptions" ng-options="option.name for option in options" ng-style="{'width': 100 + 'px'}">
+          </select>
+        </div>
+        <div class="form-group" align="center">
+          <input type="number"
+          class="form-control"
+          placeholder="Amount"
+          ng-model="formData.amount"
+          ng-style="{'width': 100 + 'px'}"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+
+    </div>
+  </div>
+</div>
